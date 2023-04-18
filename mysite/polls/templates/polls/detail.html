@@ -1,3 +1,5 @@
+<body>
+
 <h1>{{ question.question_text }}</h1>
 <ul>
 {% for choice in question.choice_set.all %}
@@ -17,3 +19,5 @@
     </fieldset>
     <input type="submit" value="Vote">
 </form>
+
+</body>
