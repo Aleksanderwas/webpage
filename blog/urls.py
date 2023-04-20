@@ -4,5 +4,5 @@ from django.urls import path
 app_name = "blog"
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
-    path('blog/<slug:slug>/', views.PostDetail.as_view(), name='post_detail')
+    path('post/<slug:slug>/', views.PostDetail.as_view(), name='post_detail')
 ]

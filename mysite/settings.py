@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import environ
-import os
 
 # Initialise environment variables
 env = environ.Env()
@@ -48,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'polls.apps.PollsConfig',
     'debug_toolbar'
 ]
 
