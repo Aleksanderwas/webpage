@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="site-heading">
+                    <h1 class="site-heading my-4 mt-3 text-white">Mój Blog</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="bg-image">
+    <div class="container">
+        <div class="">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8 mt-4 right">
+                {% for post in post_list %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                        <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                        <p class="card-text">{{post.content|slice:":200" }}</p>
+                        <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-primary">Czytaj dalej &rarr;</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% block sidebar %} {% include 'blog/sidebar.html' %} {% endblock sidebar %}
+        </div>
+    </div>
+</div>
+{%endblock%}
