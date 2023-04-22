@@ -1,0 +1,116 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="site-heading">
+                    <h1 class="site-heading my-4 mt-3 text-white">Opis projektu</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="jumbotron text-center mb-5" style="padding-top: 70px">
+    <h2>1. Opis</h2>
+</div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>Utworzona strona jest blogiem z zarządzalnym CMS-em. Serwis pozwala na dodawanie, edytowanie postów, a także na modernizację komentarzy, które mogą być dodawane przez użytkowników przy pomocy formularza. Strona jest responsywna a także przystępna dla osób niepełnosprawnych.</p>
+        <p>Nawigacja opiera się o responsywne menu które znajduje się na każdej z poszczególnych stron.</p>
+        <p>W przypadku próby wyświetlenia przez użytkownika serwisu z błędnym odnośnikiem wyświetlany jest szablon z błędem 404. <a href="testbledu404">Przykład</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron text-center mb-5" style="padding-top: 70px">
+    <h2>2. Użyte technologie</h2>
+</div>
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Frontend</h3>
+        <p>Podstawą jest HTML5<p>
+        <p>Na potrzeby projektu wykorzystałem bibliotekę CSS Bootstrap 5 aby strona była responsywna, a także przystępna dla osób z niepełnosprawnościami.</p>
+        <p>Dodatkowo używałem również stylów CSS w celu personalizacji niektórych elementów na potrzeby przystępnego wyświetlania strony</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Django</h3>
+        <p>Strona bazuje na Frameworku Django który wykorzysałem zarówno po stronie serwera w modelu MVC a także do generacji widoków dla Frontendu. Dodatkowo Framework pozwolił na utworzenie systemu zarządzania treścią (tzw. CMS).</p>
+      </div>
+      <div class="col-md-4">
+        <h3>PostgreSQL</h3>        
+        <p>Dodawane posty, komentarze są zapisywane w relacyjnej bazie danych PostgreSQL.</p>
+      </div>
+      <div class="col-md-6 mt-5">
+        <h3>Docker</h3>
+        <p>W celu sprawnego oraz szybkiego wdrożenia strony na serwer z publicznym adresem IP użyłem konteneryzacji, gdzie kontenery zostały wydzielone na kontener bazy danych oraz kontener strony internetowej.</p> 
+      </div>
+    </div>
+
+    <div class="jumbotron text-center mb-5" style="padding-top: 70px">
+        <h2>3. Czy wszystkie wymagania dotyczące projektu zostały spełnione?</h2>
+    </div> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Uważam że jak najbardziej tak ponieważ strona:</p>
+            <ul id="check">
+                <li>Jest zrealizowana na bazie HTML</li>
+                <li>Jest formatowana przy pomocy jezyka CSS oraz biblioteki Bootstrap</li>
+                <li>Jest kompatybilna z różnymi nowoczesnymi przeglądarkami</li>
+                <li>Jest dostępna dla osób z niepełnosprawnościami (np. tekst alternatywny dodany do obrazków)</li>
+                <li>Wykorzystuje co najmniej jedną technologię opisaną na wykładach</li>
+                <li>Zawiera przystępny i spójny system nawigacji</li>
+                <li>Zawiera stronę poświęconą opisowi projektu</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    <div class="jumbotron text-center mb-5" style="padding-top: 70px">
+        <h2>4. Materiały dydaktyczne</h2> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Materiały, które wykorzystywałem do nauki oraz stworzenia strony:</h4>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Technologia</th>
+                    <th scope="col">Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Django</td>
+                  <td><a href="https://www.djangoproject.com/">1. Dokumentacja Django</a><br/><a href="https://djangocentral.com">2. DJangoCentral</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Bootstrap</td>
+                  <td><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap 5</td>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <div class="jumbotron mb-5 text-center" style="padding 70px">
+        <a href="{% url 'blog:home' %}" class="btn btn-primary btn-lg">Powrót strony głównej &rarr;</a>
+    </div> 
+      
+
+  {%endblock%}

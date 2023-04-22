@@ -26,11 +26,6 @@
     padding-left: 100px;
 }
 
-#mainFooter {
-    background: #3ba855;
-    color: white;
-}
-
 .bg-image{
     background-image: 
     linear-gradient(
@@ -43,15 +38,34 @@
 }
 
 #mainFooter {
-    box-shadow: 0px 0px 100px #3ba855;
+    box-shadow: 0px 0px 50px #3ba855;
 }
 
 footer {
     margin-top: auto;
+    padding-top: 100px;
+    background: #3ba855;
+    color: white;
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+#err404image {
+    padding-top: 30px;
+    display: block;
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#check {
+    list-style: none;
+}
+  
+#check li:before {
+    content: '✓  ';
 }

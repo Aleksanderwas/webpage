@@ -6,6 +6,9 @@ from .form import CommentForm
 class PostList(generic.ListView):
     template_name = 'blog/index.html'
     queryset = Post.objects.filter(status=1).order_by('-created_on')
+
+class UsedTech(generic.TemplateView):
+    template_name = 'blog/used_tech.html'
     
 def post_detail(request, slug):
     template_name = 'blog/post_detail.html'
