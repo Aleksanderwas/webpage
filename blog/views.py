@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import Post, Comment
+from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .form import CommentForm
 
